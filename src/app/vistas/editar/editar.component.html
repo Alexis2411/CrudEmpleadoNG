@@ -1,0 +1,20 @@
+<app-header></app-header>
+<div class = "container">
+    <form [formGroup]="editarForm" (ngSubmit)="postForm(editarForm.value)">
+        <div class = "form-group" >
+                <label for ="empleadoFormControlInput">Nombre</label>
+                <input type = "text" class="form-control" placeholder="Nombre del empleado" formControlName="nombre">
+                <label for ="empleadoFormControlInput">Direccion</label>
+                <input type = "text" class="form-control" placeholder="Direccion del empleado" formControlName="direccion">
+                <label for ="empleadoFormControlInput">Telefono</label>
+                <input type = "text" class="form-control" placeholder="Telefono del empleado" formControlName="telefono">
+            </div>
+            <br><br>
+            <div>
+                <button type = "submit" class="btn btn-primary">Guardar</button>
+                <button type = "button" class="btn btn-danger" (click)="eliminar()">Eliminar</button>
+                <button type = "button" class="btn btn-black" (click)="salir()">Salir</button>
+            </div>
+    </form>
+</div>
+<app-footer></app-footer>

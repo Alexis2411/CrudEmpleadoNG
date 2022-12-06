@@ -1,0 +1,10 @@
+{
+    "/empleados": {
+        "target": "http://localhost:8080/empleados",
+        "secure": true,
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/empleados": ""
+        }
+    }
+}

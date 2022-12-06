@@ -1,0 +1,26 @@
+<div class="sidenav">
+    <div class="login-main-text">
+        <h2>Crud empleados<br> Pagina de Acceso</h2>
+        <p>Accede o Registrate para acceder</p>
+    </div>
+</div>
+<div class="main">
+    <div class="col-md-6 col-sm-12">
+        <div class="login-form">
+            <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
+                <div class="form-group">
+                    <label>username</label>
+                    <input type="text" class="form-control" placeholder="username" formControlName="username">
+                </div>
+                <div class="form-group">
+                    <label>Contraseña</label>
+                    <input type="password" class="form-control" placeholder="Contraseña" formControlName="password">
+                </div>
+                <br><br>
+                <div>
+                    <button type="submit" class="btn btn-black">Acceder</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
