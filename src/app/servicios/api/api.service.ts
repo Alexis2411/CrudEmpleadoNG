@@ -3,9 +3,11 @@ import {LoginI} from '../../modelos/login.interface';
 import {empleadoI} from '../../modelos/empleado.interface';
 import { empleadoOneI } from 'src/app/modelos/empleadoOne.interface';
 import {ResponseI} from '../../modelos/response.interface';
+import {signupI } from '../../modelos/responsesignup.interface';
 import { responseEmp } from 'src/app/modelos/responseemp.interface';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { registro } from 'src/app/modelos/registro.interfafce';
 
 
 @Injectable({
@@ -26,6 +28,12 @@ export class ApiService {
     let direccion = this.url + "api/auth/signin";
     return this.http.post<ResponseI>(direccion, form);
   }
+
+  sigin(form: registro):Observable<signupI>{
+    let direccion = this.url + "api/auth/signup";
+    return this.http.post<signupI>(direccion, form);
+  }
+
 
   getAllempleadoss():Observable<empleadoI[]>{
     let direccion = this.url + "empleados";

@@ -9,7 +9,8 @@ import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AuthInterceptor } from './api-interceptor.service';
 import {ToastrModule } from 'ngx-toastr';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { RegistroComponent } from './vistas/registro/registro.component'
 
 
 @NgModule({
